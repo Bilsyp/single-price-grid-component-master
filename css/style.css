@@ -1,0 +1,135 @@
+@import url("https://fonts.google.com/specimen/Karla");
+:root {
+  --Mobile: 375px;
+  --Desktop: 1440px;
+
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright_Yellow: hsl(71, 73%, 54%);
+
+  --Light_Gray: hsl(204, 43%, 93%);
+  --Grayish_Blue: rgb(152, 166, 189);
+  --primay: #4abebd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 16px;
+}
+body {
+  font-family: "Karla", sans-serif;
+  background: var(--Light_Gray);
+  padding: 10px;
+}
+.container {
+  border-radius: 5px;
+  max-width: var(--Desktop);
+  overflow: clip;
+  font-size: 16px;
+}
+.component {
+  position: relative;
+  padding: 20px;
+  word-break: break-all;
+}
+.component p {
+  font-size: 13px;
+  line-height: 1.2rem;
+  font-weight: 200 !important;
+  color: var(--Grayish_Blue);
+}
+.component h1 {
+  padding: 10px 0;
+  font-weight: bold;
+}
+.component h2 {
+  padding: 10px 0;
+  font-weight: 600;
+}
+.one {
+  background-color: white;
+}
+.one h1 {
+  color: var(--Cyan);
+}
+.one h2 {
+  color: var(--Bright_Yellow);
+}
+
+.two {
+  color: var(--Light_Gray);
+  background-color: var(--Cyan);
+}
+
+.two h2 span:first-child {
+  font-size: 25px;
+}
+.two h2 span:last-child {
+  font-size: 13px;
+  color: rgba(215, 228, 249, 0.866);
+  font-weight: 200;
+}
+.two p {
+  color: var(--Light_Gray);
+  font-weight: 200;
+}
+.two button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: var(--Bright_Yellow);
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.three {
+  background-color: var(--primay);
+}
+.three h1 {
+  color: var(--Light_Gray);
+}
+.three li {
+  color: rgba(215, 228, 249, 0.866);
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 765px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    overflow: hidden;
+    width: 50%;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .component {
+    padding: 29px;
+  }
+  .component h1 {
+    font-size: 25px;
+  }
+  .component h2 {
+    font-size: 20px;
+  }
+  .component p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 10px 0;
+  }
+  .one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
